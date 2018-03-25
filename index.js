@@ -28,8 +28,8 @@ function viewCart() {
   if (cart.length === 1) {
     return cartContents += `${cart[0].itemName} at $${cart[0].itemPrice}.`;
   }
-  for (var i = 0; i < cart.length - 1; i++) {
-    cartContents += `${cart[i].itemName} at ${cart[i].itemPrice}, `;
+  for (var i = 0; i < cart.length; i++) {
+    cartContents += `${cart[i].itemName} at $${cart[i].itemPrice}, `;
   }
   return cartContents;
 }
