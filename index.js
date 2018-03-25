@@ -22,8 +22,12 @@ function addToCart(item) {
 function viewCart() {
   // write your code here
   var cartContents = "In your cart, you have ";
-  for (var i = 0; i < cart.length; i++) {
-    cartContents += `${cart[i].itemName} and ${cart[i].itemPrice}, `
+  if (cart.length === 0) {
+    return "Your shopping cart is empty.";
+  } else {
+    for (var i = 0; i < cart.length; i++) {
+      cartContents += `${cart[i].itemName} and ${cart[i].itemPrice}, `
+  }
   }
 }
 
