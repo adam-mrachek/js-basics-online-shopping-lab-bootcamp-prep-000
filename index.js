@@ -29,6 +29,7 @@ function viewCart() {
       cartContents += `${cart[i].itemName} and ${cart[i].itemPrice}, `
   }
   }
+  return cartContents;
 }
 
 function total() {
