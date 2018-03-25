@@ -29,7 +29,11 @@ function viewCart() {
     return cartContents += `${cart[0].itemName} at $${cart[0].itemPrice}.`;
   }
   for (var i = 0; i < cart.length; i++) {
-    cartContents += `${cart[i].itemName} at $${cart[i].itemPrice}, `;
+    if (i === cart.length - 1) {
+      cartContents += `and ${cart[i].itemName} at $${cart[i].itemPrice}.`;
+    } else {
+      cartContents += `${cart[i].itemName} at $${cart[i].itemPrice}, `;
+    }
   }
   return cartContents;
 }
