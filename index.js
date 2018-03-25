@@ -25,11 +25,11 @@ function viewCart() {
   if (cart.length === 0) {
     return "Your shopping cart is empty.";
   }
-  for (var i = 0; i < cart.length; i++) {
-    if (cart.length === 1) {
-      return cartContents += `${cart[i].itemName} at $${cart[i].itemPrice}.`
-    }
-    cartContents += `${cart[i].itemName} and ${cart[i].itemPrice}, `
+  if (cart.length === 1) {
+    return cartContents += `${cart[i].itemName} at $${cart[i].itemPrice}.`
+  }
+  for (var i = 0; i < cart.length - 1; i++) {
+    cartContents += `${cart[i].itemName} at ${cart[i].itemPrice}, `
   }
   return cartContents;
 }
