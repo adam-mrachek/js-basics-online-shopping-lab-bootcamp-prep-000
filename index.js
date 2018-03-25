@@ -24,10 +24,12 @@ function viewCart() {
   var cartContents = "In your cart, you have ";
   if (cart.length === 0) {
     return "Your shopping cart is empty.";
-  } else {
-    for (var i = 0; i < cart.length; i++) {
-      cartContents += `${cart[i].itemName} and ${cart[i].itemPrice}, `
+  }
+  for (var i = 0; i < cart.length; i++) {
+    if (cart.length === 1) {
+      return cartContents += `${cart[i].itemName} and ${cart[i].itemPrice}.`
     }
+    cartContents += `${cart[i].itemName} and ${cart[i].itemPrice}, `
   }
   return cartContents;
 }
