@@ -27,7 +27,7 @@ function viewCart() {
   } else {
     for (var i = 0; i < cart.length; i++) {
       cartContents += `${cart[i].itemName} and ${cart[i].itemPrice}, `
-  }
+    }
   }
   return cartContents;
 }
